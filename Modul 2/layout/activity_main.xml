@@ -1,1 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tip Time"
+        android:background="@color/purple_500"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:padding="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/serviceCostInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Cost of Service"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="16dp"
+            android:importantForAccessibility="no" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="How was the service?"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_marginBottom="8dp" />
+
+        <RadioGroup
+            android:id="@+id/tipOptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/tipOption20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Amazing (20%)"
+                android:textColor="@android:color/black"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/tipOption18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Good (18%)"
+                android:textColor="@android:color/black" />
+
+            <RadioButton
+                android:id="@+id/tipOption15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Okay (15%)"
+                android:textColor="@android:color/black" />
+        </RadioGroup>
+
+        <Switch
+            android:id="@+id/roundUpSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Round up tip?"
+            android:layout_marginBottom="16dp"
+            android:thumbTint="@color/switch_thumb_color"
+            android:trackTint="#B2000000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/purple_500"
+            android:textColor="@android:color/white">
+        <Button
+            android:id="@+id/calculateButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CALCULATE"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="@android:color/transparent" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tipResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tip Amount"
+                android:textSize="16sp"
+                android:layout_alignParentEnd="true"
+                android:paddingTop="16dp"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
